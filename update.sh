@@ -50,7 +50,7 @@ function update_upgrade () {
 	echo -e "${GREEN}Update and Upgrade finished.${NOCOLOR}";sleep 1
 
 	# System cleaning
-	echo -e "${GREEN}Starting Cleaning.${NOCOLOR}";sleep 1
+	echo -e "\n${GREEN}Starting Cleaning.${NOCOLOR}";sleep 1
 	echo
 	sudo apt-get --purge autoremove
 	sudo apt-get autoclean
@@ -69,7 +69,7 @@ function update_upgrade () {
 
 function IP () {
 	IP_SISTEMA=`hostname -I`
-	echo -e "\n Your IP is: $IP_SISTEMA"
+	echo -e "\n${GREEN}Your IP is:{NOCOLOR} $IP_SISTEMA$\n"
 }
 
 function app_install () {
