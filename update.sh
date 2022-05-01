@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author: meepmaster
 # Date: 19-04-2022
-# Description: Enumeration
+# Description: Update Upgrade
 
 
 # Color variables 
@@ -58,6 +58,8 @@ function update_upgrade () {
 	echo
 	echo -e "${GREEN}Cleaning finished.${NOCOLOR}";sleep 1
 	echo
+	echo -e "${GREEN} $TIME_STAMP ${NOCOLOR}";sleep 1
+
 	echo -e "${GREEN}Be light, be Yourself...${NOCOLOR}"
     echo
     echo
