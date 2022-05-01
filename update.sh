@@ -69,7 +69,7 @@ function update_upgrade () {
 
 function IP () {
 	IP_SISTEMA=`hostname -I`
-	echo -e "\n${GREEN}Your IP is: {NOCOLOR} $IP_SISTEMA$\n"
+	echo -e "\n${GREEN}Your IP is:${NOCOLOR} $IP_SISTEMA$\n"
 }
 
 function app_install () {
