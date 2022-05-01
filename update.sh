@@ -38,7 +38,7 @@ function connect() {
 
 function update_upgrade () {
 	# System update/upgrade
-	echo -e "\ncd${GREEN}Starting Update && Upgrade.${NOCOLOR}";sleep 1
+	echo -e "\n${GREEN}Starting Update && Upgrade.${NOCOLOR}";sleep 1
 	echo
 	sudo dpkg --configure -a
 	sudo apt-get install -f
@@ -56,9 +56,9 @@ function update_upgrade () {
 	sudo apt-get autoclean
 	sudo apt-get clean
 	echo
-	echo -e "${GREEN}Cleaning finished.${NOCOLOR}";sleep 1
+	echo -e "\n${GREEN}Cleaning finished.${NOCOLOR}";sleep 1
 	echo
-	echo -e "${GREEN} $TIME_STAMP ${NOCOLOR}";sleep 1
+	echo -e "${GREEN}$TIME_STAMP ${NOCOLOR}";sleep 1
 	echo
 	echo -e "${GREEN}Be light, be Yourself...${NOCOLOR}"
     echo
@@ -77,15 +77,17 @@ function app_install () {
 # Nmap installation	
 
 	if [ ! -x "$(command -v nmap)" ];then
-        echo "[+] nmap not detected...Installing"
+        echo "${GREEN}[+]${NOCOLOR} nmap not detected...Installing"
         sudo apt-get install nmap -y > installing;rm installing
-else
-    echo "[+] nmap detected"
+	else
+    echo "${RED}[+]${NOCOLOR} nmap detected"
      
-fi
+	fi
 }
 
 
 # Call funtions
 
 update_upgrade
+
+app_install
