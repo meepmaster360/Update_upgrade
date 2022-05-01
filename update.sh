@@ -19,7 +19,7 @@ TIME_STAMP="Updated $RIGHT_NOW by $USER"
 
 function user() {
 	if [ $(id -u) != "0" ];then
-		echo "\n Please run this script with root user!"
+		echo " Please run this script with root user!"
 		exit 1
 	fi
 }
@@ -29,7 +29,7 @@ function user() {
 function connect() {
 	ping -c 1 -w 3 google.com > /dev/null 2>&1
 	if [ "$?" != 0 ];then
-		echo "\n This script needs an active internet connection!"
+		echo " This script needs an active internet connection!"
 		exit 1
 	fi
 }
@@ -38,7 +38,7 @@ function connect() {
 
 function update_upgrade () {
 	# System update/upgrade
-	echo -e "/ncd${GREEN}Starting Update && Upgrade.${NOCOLOR}";sleep 1
+	echo -e "\ncd${GREEN}Starting Update && Upgrade.${NOCOLOR}";sleep 1
 	echo
 	sudo dpkg --configure -a
 	sudo apt-get install -f
@@ -59,7 +59,7 @@ function update_upgrade () {
 	echo -e "${GREEN}Cleaning finished.${NOCOLOR}";sleep 1
 	echo
 	echo -e "${GREEN} $TIME_STAMP ${NOCOLOR}";sleep 1
-
+	echo
 	echo -e "${GREEN}Be light, be Yourself...${NOCOLOR}"
     echo
     echo
