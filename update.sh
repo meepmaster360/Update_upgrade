@@ -77,10 +77,10 @@ function app_install () {
 # Nmap installation	
 
 	if [ ! -x "$(command -v nmap)" ];then
-        echo "${GREEN}[+]${NOCOLOR} nmap not detected...Installing"
+        echo -e "${GREEN}[+]${NOCOLOR} nmap not detected...Installing"
         sudo apt-get install nmap -y > installing;rm installing
 	else
-    echo "${RED}[+]${NOCOLOR} nmap detected"
+    echo -e "${RED}[+]${NOCOLOR} nmap detected"
      
 	fi
 }
