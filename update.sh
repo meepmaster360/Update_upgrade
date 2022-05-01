@@ -38,7 +38,7 @@ function connect() {
 
 function update_upgrade () {
 	# System update/upgrade
-	echo -e "${GREEN}Starting Update && Upgrade.${NOCOLOR}";sleep 1
+	echo -e "/ncd${GREEN}Starting Update && Upgrade.${NOCOLOR}";sleep 1
 	echo
 	sudo dpkg --configure -a
 	sudo apt-get install -f
