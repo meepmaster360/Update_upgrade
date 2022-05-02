@@ -73,7 +73,6 @@ function IP () {
 }
 
 function app_install () {
-
 # Nmap installation	
 	if [ ! -x "$(command -v nmap)" ];then
         echo -e "\n${RED}[+]${NOCOLOR} nmap not detected...Installing\n"
