@@ -42,6 +42,7 @@ function update_upgrade () {
 	echo
 	sudo dpkg --configure -a
 	sudo apt-get install -f
+	sudo apt-get --fix-broken install -y
 	sudo apt update --fix-missing
 	sudo apt-get upgrade -y
 	sudo apt full-upgrade -y
