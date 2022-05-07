@@ -66,41 +66,8 @@ function update_upgrade () {
     echo
 }
 
-# IP
-
-function IP () {
-	IP_SISTEMA=`hostname -I`
-	echo -e "\n${GREEN}Your IP is:${NOCOLOR} $IP_SISTEMA$\n"
-}
-
-function app_install () {
-# Nmap installation	
-	if [ ! -x "$(command -v nmap)" ];then
-        echo -e "\n${RED}[+]${NOCOLOR} nmap not detected...Installing\n"
-        sudo apt-get install nmap -y > installing;rm installing
-	else
-    echo -e "${GREEN}[+]${NOCOLOR} nmap detected\n"
-     
-	fi
-# Nikto installation	
-	if [ ! -x "$(command -v nikto)" ];then
-        echo -e "\n${RED}[+]${NOCOLOR} nikto not detected...Installing\n"
-        sudo apt-get install nikto -y > installing;rm installing
-	else
-    echo -e "${GREEN}[+]${NOCOLOR} nikto detected\n"
-     
-	fi
-# Hydra installation	
-	if [ ! -x "$(command -v hydra)" ];then
-        echo -e "\n${RED}[+]${NOCOLOR} hydra not detected...Installing\n"
-        sudo apt-get install hydra -y > installing;rm installing
-	else
-    echo -e "${GREEN}[+]${NOCOLOR} hydra detected\n"
-     
-	fi	
-}
-
-
 # Call funtions
 
+user
+connect
 update_upgrade
